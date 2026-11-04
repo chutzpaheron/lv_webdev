@@ -2,24 +2,45 @@
 
 <html lang="en">
     <head>
+        <style>
+            body{ /*selector*/
+                color:indigo; /*declaration is COLOR, property is INDIGO*/
+                background-color:rgb(172, 186, 250); /*PUT SEMICOLONS IN BETWEEN DECLARATIONS!!!*/
+                border: solid 5px #885599
+            }
+            h1{
+                text-align: center
+            }
+            #hi{
+                color:midnightblue;
+                text-decoration:overline 
+            }
+            .lists{
+                width: 20%;
+                background-color:rgb(206, 227, 255);
+                border-radius: 5px;
+                font-size: 1rem
+            }
+        </style>
         <title>advanced thing</title>
         <meta charset="UTF-8">
     </head>
     <body>
         <h1>ADVANCED NOTES</h1>
         <h2>LISTS</h2>
+        <div class="lists">
         <ol>
             <li>this is an ordered list</li>
-            <li>first you start off with the tag OL...</li>
+            <li id="hi">first you start off with the tag OL...</li>
             <li>then you surround each item with LI tags</li>
-            <li>LI tags are nested within OL</li>
+            <li id="hi">LI tags are nested within OL</li>
             <li>see it puts numbers on my items</li>
         </ol>
         <ul>
             <li>this is an UNORDERED list</li>
-            <li>idk what it does. whats the purpose of this</li>
+            <li id="hi">idk what it does. whats the purpose of this</li>
             <li>oh so it just puts bullet points and not numbers</li>
-            <li>ok</li>
+            <li id="hi">ok</li>
             <li>works the same as ordered list</li>
         </ul>
         <dl>
@@ -38,6 +59,7 @@
             <dt>DT stands for detailed title</dt>
             <dd>DD stands for detailed data</dd>
         </dl>
+        </div>
         <h2>ATTRIBUTES</h2>
         <p>IMAGES?????</p>
         <p>lots of things in html are attributes</p>
@@ -74,5 +96,17 @@
         <p>click on it</p>
         <p>good way to save pictures</p>
         <p>DIV TAGS make it so two elements cannot be separated</p>
+        <br>
+        <p>every style needs a SELECTOR</p>
+        <p>tells the computer what to change</p>
+        <p>DECLARATION- ONE instruction of what to change</p>
+        <p>1- PROPERTY, what to change</p>
+        <p>2- VALUE, how to change it</p>
+        <p>PUT SEMICOLONS IN BETWEEN DECLARATIONS!</p>
+        <p>the last change made is the one you will see</p>
+        <p>like if elif else</p>
+        <p>class goes inside div tag</p>
+        <p>summon by typing period then name of class</p>
+        <p>rem adjusts font size based on everything else</p>
     </body>
 </html>
