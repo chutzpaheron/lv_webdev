@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            body{
+                color: #bbaadd;
+                background-color:#2f0b21
+            }
+            #box{
+                text-align:center;
+                height: 75px;
+                width: 75px;
+                background-color: oldlace;
+                color:#885599;
+                /*margin: 0 auto; CENTERS THEM*/             
+            }
+            #grid-wrapper{
+                display: grid; /*smushes boxes together, grid is not flexible like column*/
+                grid-template-columns: 2fr 1fr 100px; /*COLUMNS, fraction tells the size of columns, each fraction is half the screen*/
+                gap: 50px;
+            }
+            #flex-wrapper{
+                display: flex; /*sets them HORIZONTALLY, flex box is flexible and what it does is in relation to the stuff in the boxes*/
+                flex-direction: row; /*row is default*/
+                justify-content: space-around; /*justify centers The Entire Thing SPACE BETWEEN AND AROUND IS EVEN*/
+                align-items: center; /*y-axis*/
+                flex-wrap: wrap; /*kicks items off the line so it doesnt hang off the end of the webpage*/
+            }
+            button{
+                margin-top: 25px; /*margin safe space whatever*/
+                padding: 25px; /*padding goes inside*/
+            }
+        </style>
+        <title>aligning stuff</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>aligning stuff</h1>
+        <div id="grid-wrapper">
+            <div id="box">
+                <p>hi am box <b>1</b></p>
+            </div>
+            <div id="box">
+                <p>hi am box <b>2</b></p>
+            </div>
+            <div id="box">
+                <p>hi am box <b>3</b></p>
+            </div>
+            <div id="box">
+                <p>hi am box <b>4</b></p>
+            </div>
+        </div>
+        <div id="flex-wrapper">
+            <div id="box">
+                <p>hi am box <b>5</b></p>
+            </div>
+            <div id="box">
+                <p>hi am box <b>6</b></p>
+            </div>
+            <div id="box">
+                <p>hi am box <b>7</b></p>
+            </div>
+            <div id="box">
+                <p>hi am box <b>8</b></p>
+            </div>
+        </div>
+        <button>CLICK</button>
+    </body>
+</html>
