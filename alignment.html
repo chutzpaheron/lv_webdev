@@ -16,20 +16,32 @@
                 /*margin: 0 auto; CENTERS THEM*/             
             }
             #grid-wrapper{
-                display: grid; /*smushes boxes together, grid is not flexible like column*/
-                grid-template-columns: 2fr 1fr 100px; /*COLUMNS, fraction tells the size of columns, each fraction is half the screen*/
+                display: grid; 
+                /*smushes boxes together, grid is not flexible like column*/
+                grid-template-columns: 2fr 1fr 100px; 
+                /*COLUMNS, fraction tells the size of columns, each fraction is half the screen*/
                 gap: 50px;
             }
             #flex-wrapper{
-                display: flex; /*sets them HORIZONTALLY, flex box is flexible and what it does is in relation to the stuff in the boxes*/
-                flex-direction: row; /*row is default*/
-                justify-content: space-around; /*justify centers The Entire Thing SPACE BETWEEN AND AROUND IS EVEN*/
-                align-items: center; /*y-axis*/
-                flex-wrap: wrap; /*kicks items off the line so it doesnt hang off the end of the webpage*/
+                display: none; 
+                /*sets them HORIZONTALLY, flex box is flexible and what it does is in relation to the stuff in the boxes*/
+                flex-direction: row; 
+                /*row is default*/
+                justify-content: space-around;
+                /*justify centers The Entire Thing SPACE BETWEEN AND AROUND IS EVEN*/
+                align-items: center; 
+                /*y-axis*/
+                flex-wrap: wrap; 
+                /*kicks items off the line so it doesnt hang off the end of the webpage*/
             }
             button{
-                margin-top: 25px; /*margin safe space whatever*/
-                padding: 25px; /*padding goes inside*/
+                margin-top: 25px; 
+                /*margin safe space whatever*/
+                padding: 25px; 
+                /*padding goes inside*/
+            }
+            img{
+                width: 500px;
             }
         </style>
         <title>aligning stuff</title>
@@ -37,9 +49,10 @@
     </head>
     <body>
         <h1>aligning stuff</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Rauchschwalbe_Hirundo_rustica.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="barn swallow" id="swallow" onmouseout="rotate()">
         <div id="grid-wrapper">
-            <div id="box">
-                <p>hi am box <b>1</b></p>
+            <div id="box" onmouseover = "showHide()">
+                <p id = "text">show more...</p>
             </div>
             <div id="box">
                 <p>hi am box <b>2</b></p>
@@ -65,6 +78,37 @@
                 <p>hi am box <b>8</b></p>
             </div>
         </div>
-        <button>CLICK</button>
+        <input type="color" id="newColor">
+        <br>
+        <button onclick="changeColor()">CLICK</button>
+        <script>
+            let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAq5qESPxi0Cda_-037-9JUViUCv-RH1HL-NTVycJS4DZgLHtPfXe5Rwb&s=10","https://s3.animalia.bio/animals/photos/full/original/barn-swallow-juvenile-1.webp","https://upload.wikimedia.org/wikipedia/commons/f/ff/Barn_Swallow_%28Hirundo_rustica%29_chick.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original", "https://upload.wikimedia.org/wikipedia/commons/7/7d/Rauchschwalbe_Hirundo_rustica.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"]
+            let currentImage = 0
+            function rotate(){
+                currentImage += 1
+                if (currentImage > 3){
+                    currentImage = 0
+                }
+                document.getElementById("swallow").src = images[currentImage]
+            }
+            function changeColor(){
+                let currentColor = document.getElementById("newColor").value
+                document.getElementById("box").style.
+                /*searches through document until it finds the first box*/
+                backgroundColor = currentColor
+                /*DOCUMENT finds html document, next line of text looks for a specific thing (getelementbyid, box), then you list the attribute you want to change (style)*/
+            }
+            function showHide(){
+                let item = document.getElementById("flex-wrapper")
+                if(item.style.display == "flex"){
+                    item.style.display = "none"
+                    document.getElementById("text").innerHTML = "show more..."
+                }else{
+                    item.style.display = "flex" // HUH YOU CAN MAKE COMMENTS LIKE THIS
+                    // IVE BEEN STRUGGLING HITTING AND UNHITTING THE SHIFT BUTTON WITH THE /* */ STUFF WHAT IS THIS
+                    document.getElementById("text").innerHTML = "show LESS..."
+                }
+            }
+        </script>
     </body>
 </html>
