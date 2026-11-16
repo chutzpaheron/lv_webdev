@@ -42,6 +42,11 @@
             width: 50%;
             height: 50%;
            }
+           #banner{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+           }
            #intro{
             text-align: center;
             font-size: larger;
@@ -97,6 +102,10 @@
         </style>
     </head>
     <body>
+        <img src="https://images.squarespace-cdn.com/content/v1/54accc8ae4b032a504ce64e2/1479238067958-X64WE167C46XPY04VIWG/grass.jpg" alt="Banner image" id="banner" onmouseover="photos()">
+        <div>
+            <p><b>Photo credit by: Adam Kerfoot-Roberts, Matthew Dillon, public domain, Richard Smith</b></p>
+        </div id="aster">
         <h1>Lawns</h1>
         <div id="intro">
             <p>Hello, I am very passionate about nature and our effects on it, and in this site I talk about one of the largest causes of habitat destruction and biodiversity loss that no one mentions: the lawn.</p>
@@ -175,5 +184,16 @@
                 <li><a href="https://www.audubon.org/press-room/us-bird-populations-continue-alarming-decline-new-report-finds" target="_blank">"U.S. Bird Populations Continue Alarming Decline, New Report Finds"</a>, Audubon Society</li>
         </ol>
         </div>
+        <script>
+            let images = ["https://snappygoat.com/b/3fde5e2130c74e26d6540b95914957f49de34136","https://amtrakguide.com/wp-content/uploads/2026/03/anteolope-island.jpg","https://cdn2.picryl.com/photo/2015/07/12/my-public-lands-roadtrip-pariette-wetlands-in-utah-20220345702-6e689d-1024.jpg", "https://dwaap.org/wp-content/uploads/2019/12/white-american-pelican.jpg"]
+            let currentImage = 0
+            function photos(){
+                currentImage += 1
+                if (currentImage > 3){
+                    currentImage = 0
+                }
+                document.getElementById("banner").src = images[currentImage]
+            }
+        </script>
     </body>
 </html>
