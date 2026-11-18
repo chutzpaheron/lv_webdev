@@ -65,10 +65,11 @@
             border: dashed 5px #00aa11;
            }
            #flex-wrapper{
-            display: flex;
+            display: none;
             flex-direction: row;
             justify-content: space-evenly;
-            align-items: center;
+            align-self: center;
+            flex-wrap:wrap;
            }
            #exp{
             color:#004110;
@@ -81,11 +82,13 @@
             margin-right: 30px;
            }
            #button{
-            display:flex;
-            justify-content:center;
-            height:50px;
-            margin-left:50px;
-            width:90%;
+            display: flex;
+            flex-direction: row;
+            align-self:center;
+            margin-left: 550px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color:#003100;
+            color:aliceblue;
            }
            #tangent{
             color:#003100;
@@ -110,8 +113,7 @@
     </head>
     <body>
         <img src="https://images.squarespace-cdn.com/content/v1/54accc8ae4b032a504ce64e2/1479238067958-X64WE167C46XPY04VIWG/grass.jpg" alt="Banner image" id="banner" onmouseover="photos()">
-        <div>
-            <p><b>Photo credit by: <a href="https://easyscape.com/species/Artemisia-tridentata-subsp.-wyomingensis%28Wyoming-Big-Sagebrush%29" target="_blank">Matt Lavin</a>, <a href="https://www.andyslawnandlandscape.com/" target="_blank">Adam Kerfoot-Roberts</a>, <a href="https://www.flickr.com/photos/ruggybear/49408253886" target="_blank">Matthew Dillon</a>, <a href="https://picryl.com/media/my-public-lands-roadtrip-pariette-wetlands-in-utah-20220345702-6e689d" target="_blank">public domain</a>, <a href="https://pxhere.com/en/photo/984416" target="_blank">Richard Smith</a></b></p>
+        <h5><b>Photo credit by: <a href="https://easyscape.com/species/Artemisia-tridentata-subsp.-wyomingensis%28Wyoming-Big-Sagebrush%29" target="_blank">Matt Lavin</a>, <a href="https://www.andyslawnandlandscape.com/" target="_blank">Adam Kerfoot-Roberts</a>, <a href="https://www.flickr.com/photos/ruggybear/49408253886" target="_blank">Matthew Dillon</a>, <a href="https://picryl.com/media/my-public-lands-roadtrip-pariette-wetlands-in-utah-20220345702-6e689d" target="_blank">public domain</a>, <a href="https://pxhere.com/en/photo/984416" target="_blank">Richard Smith</a></h5>
         </div id="aster">
         <h1>Lawns</h1>
         <div id="intro">
@@ -130,14 +132,17 @@
         </div>
         <div id="grass">
             <p>What is the problem with this?</p>
+        </div>     
+        <div id="click" onclick="showHide()">
+            <button div id="button">yuck! lawns if you click this!</button>
         </div>
         <div id="flex-wrapper">
             <img src="https://whatgrassisthis.com/examples/kentucky-bluegrass-example.jpg" class="poa" id="flex-wrap"> 
             <img src="https://whatgrassisthis.com/examples/bermudagrass-example.jpg" class="bermuda" id="flex-wrap">
             <img src="https://whatgrassisthis.com/examples/buffalograss-lawn.jpg" class="st" id="flex-wrap">
+            <p><b>From left to right: Kentucky Bluegrass <i>(Poa pratensis)</i>, Bermudagrass <i>(Cynodon dactylon)</i>, St. Augustinegrass <i>(Stenophratum secundatum)</i></b></p>
+            <h4>Images from: whatgrassisthis.com users left to right <a href="https://whatgrassisthis.com/compare/poa-annua-vs-kentucky-bluegrass" target="_blank">Pilot138-17</a>, <a href="https://whatgrassisthis.com/compare/bahia-vs-bermuda" target="_blank">V C Balakrishnan</a>, <a href="https://whatgrassisthis.com/guides/buffalograss" target="_blank">Sam Kieschnick</a></h4>
         </div>
-        <p><b>From left to right: Kentucky Bluegrass <i>(Poa pratensis)</i>, Bermudagrass <i>(Cynodon dactylon)</i>, St. Augustinegrass <i>(Stenophratum secundatum)</i></b></p>
-        <h4>Images from: whatgrassisthis.com users left to right <a href="https://whatgrassisthis.com/compare/poa-annua-vs-kentucky-bluegrass" target="_blank">Pilot138-17</a>, <a href="https://whatgrassisthis.com/compare/bahia-vs-bermuda" target="_blank">V C Balakrishnan</a>, <a href="https://whatgrassisthis.com/guides/buffalograss" target="_blank">Sam Kieschnick</a></h4>
         <div id="aster">
         <h5><i>*yes, this plant is named after the great state of Kentucky despite being found halfway across the world. It was apparently named that because it grew well in the region, which makes no sense to me because that's not how common names work. You don't introduce an organism to a region and then name it after that, even if it does good there. you name it after the place it was originally found. It's like calling pigeons american doves despite them being native to around the Mediterranean</i></h5>
         </div>
@@ -151,9 +156,7 @@
         <div id="exp">
         <p>Not that people like geese or insects anyway. But if you're going to maintain massive unused fields full of the stuff instead of actual habitat what do you expect?</p>
         </div>
-        <div id="text" onclick="showHide">
-            <button id="button" onclick="showHide">Show Tangent</button>
-            <div id="tangent">
+        </div id="tan">
             <h3><i>A small tangent...</i></h3>
             <p>I know that a lot of people will justify us keeping lawns for the sake of leisure, or keeping pests out. Oh no, where will all the kids go if we replace some of the grass in the park with flowers? Where will people hold their grass-only picnics? What if I step on a spiky little native plant??? OH NO! WHAT WILL HAPPEN THEN! THINK OF THE KIDS!!!</p>
             <p>While grass is definitely needed* for playing fields, there is absolutely no reason why an entire city has to be covered in them. I'm not talking about just parks, I mean the gutters along roads, the business block, the clear zones along highways. There is no reason why we should put grass in these places. It's not like people are stepping around barefoot here (hopefully not), putting in a toxic or thorny native plant won't do harm. Besides, we already do this with ornamental plants anyway - sweetgum is a common city tree which grows spiky burrs that dig into your feet, and a multitude of pretty flowers are toxic if ingested. And they plant this in the subrubs! There's no reason not to do this at an abandoned place in town!</p>
@@ -203,18 +206,17 @@
                     currentImage = 0
                 }
                 document.getElementById("banner").src = images[currentImage]
-            }
+            }           
             function showHide(){
-                let item = document.getElementById("button")
-                if(item.style.display == "flex"){
-                    item.style.display = "none"
-                    document.getElementById("text").innerHTML = "Show Tangent"
-                }else{
+                let item = document.getElementById("flex-wrapper")
+                if(item.style.display == "none"){
                     item.style.display = "flex"
-                    document.getElementById("text").innerHTML = "Hide Tangent"
+                    document.getElementById("text").innerHTML = "yuck! lawns if you click this!"
+                }else{
+                    item.style.display = "none"
+                    document.getElementById("text").innerHTML = "HIDE"
                 }
             }
-            
         </script>
     </body>
 </html>
