@@ -7,16 +7,74 @@
         <style>
             body{
                 background-color:#dbbeaa;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                border: dashed 10px #00afc8;
+            }
+            h1{
+                text-align: center;
                 font-family: 'Courier New', Courier, monospace;
+                color: #044460;
+            }
+            h2{
+                text-align: center;
+                font-style: italic;
+                font-family: 'Courier New', Courier, monospace;
+                color: #085f70;
+            }
+            #banner{              
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+            #paragraphs{
+                text-align: left;
+                margin-left: 30px;
+                margin-right: 30px;
+                background-color: #dbd0aa;
+                color: #0a6a73;
+            }
+            #actuallist{
+                margin-left: 30px;
+                margin-right: 30px;
+                background-color: #d7dbaa;             
+                color: #117b85;
+            }
+            #list{
+                font-weight: bolder;
             }
         </style>
     </head>
     <body>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Great_Salt_Lake_Utah_USA_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" id="banner" alt="Banner images of the Great Salt Lake">
+        <h5>Image credit by: <a href="https://commons.wikimedia.org/wiki/File:Great_Salt_Lake_Utah_USA_2005.jpg" target="_blank">Brigitte Werner</a></h5>
         <h1>VISIT THE GREAT SALT LAKE!</h1>
-        <p><i>The Great Salt Lake is one of the most important bird and wildlife refuges in the American interior west. Come and visit to see thousands of birds and dozens of species!</i></p>
-        <p>Birds by Numbers</p>
-        <ul>
-            <li>Ducks- the main species of duck seen in the Great Salt Lake are Cinnamon Teals, Green-winged Teals and Northern Shovelers. Numbers fluctuate throughout the year but these can often be seen in the hundreds. Other common ducks include Gadwall, American Wigeon, Canvasback and Redhead, as well as Wood Ducks which are not common but are basically only found here.</li>
+        <br>
+        <h2>What's it like?</h2>
+        <div id="paragraphs">
+            <p>The Great Salt Lake (GSL) is a sanctuary in the desert and the largest lake west of the Great Plains. It is one of the biggest saline lakes in the world, and the biggest in the Western Hemisphere. Most of the habitat surrounding it is wetlands, though some parts of it contain more arid scrubland areas like Antelope Island. The salty environment means the only aquatic life which survives are brine shrimp, favored food for many semi-aquatic birds. This allows it to provide needed refuge for hundreds of different animal species, and is one of the largest stopovers for waterbirds migrating through the Interior West.</p>
+        </div>
+        <h2>Why should I visit?</h2>
+        <div id="paragraphs">
+            <p>The Great Salt Lake is an incredible and one-of-a-kind place to visit. The water is eight times saltier than that of the ocean, and you can even float in it. That doesn't happen just in any place! Here you may see the most birds you will ever encounter in your life, be it thousands of swallows, phalaropes or avocets. The capital of Utah is even named after it. There is nothing quite like it, and in a state famous for its red rocks, canyons and forests, that means a lot.</p>
+        </div>
+        <h2>Where can I go?</h2>
+        <div id="paragraphs">
+            <p>There are multiple places you can visit to view the wildlife. My personal favorites are the Bear River Migratory Bird Refuge and Farmington Bay NWR. Bear River is pretty out of the way north by Brigham City, while Farmington Bay is only about a 30-minute drive from Salt Lake City. In either of these spots you may see dozens of bird species at a time, sometimes numbering in the hundreds.</p>
+            <p>Different spots in the GSL may give you different wildlife. For example, Antelope Island is mostly dry desert, and there you can famously find bison. Other mammals include coyotes, pronghorn, bighorn sheep and mule deer. Fielding Garr Ranch on the island also hosts a large quantity of songbirds during migration, like warblers, vireos, thrushes and shrikes. </p>
+        </div>
+        <h2>What can I see there?</h2>
+        <ul id="actuallist">
+            <li><span id="list">Waterfowl-</span> the main species of duck seen in the Great Salt Lake are Cinnamon Teals, Green-winged Teals and Northern Shovelers. Numbers fluctuate throughout the year but these can often be seen in the hundreds. Other common ducks include Gadwall, American Wigeon, Canvasback and Redhead, as well as Wood Ducks which are not common but are really  the only place where this species is seen in Utah. Other than ducks there are also Trumpeter and Tundra Swans.</li>
+            <li><span id="list">Grebes-</span> grebes are duck-like waterbirds most closely related to flamingos. The Great Salt Lake is an important refuge for them. The main species are Western, Clark's, Pied-billed and Eared Grebes, and in fact up to 95% of all Eared Grebes in the Western Hemisphere pass through the Great Salt Lake.</li>
+            <li><span id="list">Sandpipers-</span> common sandpipers include Long-billed Dowitcher, Greater and Lesser Yellowlegs, Marbled Godwit, Long-billed Curlew, Solitary, Spotted and Least Sandpipers.
+            Plovers and other shorebirds- the Great Salt Lake houses a small colony of Snowy Plover, an endangered and highly threatened shorebird. While these are not very common you may see many other shorebirds like American Avocet, Black-necked Stilt, and Wilson's and Red-necked Phalarope.</li>
+            <li><span id="list">Herons-</span> a variety of herons can be found, like Great Blue Heron, Snowy Egret, Black-crowned Night-heron and American Bittern. In fact, Farmington Bay NWR actually has a Great Blue Heron rookery where you can watch dozens at a time caring for their chicks in the spring!</li>
+            <li><span id="list">Other waterbirds-</span> American White Pelican is a large, common species of pelican that you may see flying in large V-shaped flocks. Other birds include White-faced Ibis and Double-crested Cormorant. Virginia Rail and Sora are also common but cryptic residents of the lake.</li>
+            <li>There are many more landbirds but this list is getting too long and there are tons of species.</li>
         </ul>
+        <h2>Visit before it's too late</h2>
+        <div id="paragraphs">
+            <p>The GSL is rapidly shrinking due to various factors like agriculture and climate change. The lake has fallen around 19 feet since the 1850s, and does not seem to be getting any better recently- it is estimated that it may be completely dried up by 2030. This is of course obviously bad for the wildlife who rely on this lake for sustenance, but it's also bad for us too. The lakebed contains a multitude of heavy metals which, when exposed, get kicked up into the atmosphere and breathed in by us. I hate to end with a bummer but it's unfortunately a pretty big topic when talking about this lake. Thankfully, many organizations are working to restore the lake's health, like Wake the Great Salt Lake and Friends of the GSL. So, come and check it out, and maybe learn something new about our local wildlife and how to help it.</p>
+        </div>
     </body>
 </html>
