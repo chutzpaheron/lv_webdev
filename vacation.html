@@ -26,7 +26,7 @@
             }
             #banner{              
                 width: 100%;
-                height: 400px;
+                height: 550px;
                 object-fit: cover;
             }
             #paragraphs{
@@ -55,7 +55,7 @@
                 display: block;
                 margin: auto;
                 width: 70%;
-                height: 300px;
+                height: 500px;
                 object-fit: cover;
                 border: double 10px #f5edcb;
             }
@@ -65,14 +65,14 @@
             #bearriver{ 
                 margin: auto;
                 width: 100%;
-                height: 500px;
+                height: 550px;
                 object-fit: cover;
             }
         </style>
     </head>
     <body>
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Great_Salt_Lake_Utah_USA_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" id="banner" alt="Banner images of the Great Salt Lake" onmouseout="bannerChange()">
-        <h5>Image credit by: <a href="https://commons.wikimedia.org/wiki/File:Great_Salt_Lake_Utah_USA_2005.jpg" target="_blank">Brigitte Werner</a>, <a href="https://imaggeo.egu.eu/view/4705/" target="_blank">Jennifer Ziesch</a>, <a href="https://picryl.com/media/a-scenic-view-of-the-bear-river-migratory-bird-refuge-in-utah-30ca90" target="_blank">public domain</a></h5>
+        <h5>GSL landscapes. Image credit by: <a href="https://commons.wikimedia.org/wiki/File:Great_Salt_Lake_Utah_USA_2005.jpg" target="_blank">Brigitte Werner</a>, <a href="https://imaggeo.egu.eu/view/4705/" target="_blank">Jennifer Ziesch</a>, <a href="https://picryl.com/media/a-scenic-view-of-the-bear-river-migratory-bird-refuge-in-utah-30ca90" target="_blank">public domain</a></h5>
         <h1>VISIT THE GREAT SALT LAKE!</h1>
         <br>
         <h2>What's it like?</h2>
@@ -89,8 +89,8 @@
             <p>Different spots in the GSL may give you different wildlife. For example, Antelope Island is mostly dry desert, and there you can famously find bison. Other mammals include coyotes, pronghorn, bighorn sheep and mule deer. Fielding Garr Ranch on the island also hosts a large quantity of songbirds during migration, like warblers, vireos, thrushes and shrikes. </p>
         </div>
         <h2>What can I see there?</h2>
-        <img src="https://s3.animalia.bio/animals/photos/full/original/2560px-wilson27s-phalarope2c-oregon-03.webp" alt="Wilson's Phalarope" id="phalarope">
-        <h5>Wilson's Phalarope. Photo credit by: <a href="https://animalia.bio/wilsons-phalarope" target="_blank">VJAnderson</a></h5>
+        <img src="https://s3.animalia.bio/animals/photos/full/original/2560px-wilson27s-phalarope2c-oregon-03.webp" alt="Various birds of the GSL." id="phalarope" onmouseout="phalaropeChange()">
+        <h5>Wilson's Phalarope, American Avocet, Cinnamon Teal, Western Grebe. Image credit by: <a href="https://animalia.bio/wilsons-phalarope" target="_blank">VJAnderson</a>, <a href="https://animalia.bio/american-avocet" target="_blank">Kim Taylor Hull</a>, <a href="https://animalia.bio/cinnamon-teal" target="_blank">Mike's Birds</a>, <a href="https://animalia.bio/western-grebe" target="_blank">Russ</a></h5>
         <div id="flexwrap">
             <ul id="actuallist">
                 <li><span id="list">Waterfowl-</span> the main species of duck seen in the Great Salt Lake are Cinnamon Teals, Green-winged Teals and Northern Shovelers. Numbers fluctuate throughout the year but these can often be seen in the hundreds. Other common ducks include Gadwall, American Wigeon, Canvasback and Redhead, as well as Wood Ducks which are not common but are really  the only place where this species is seen in Utah. Other than ducks there are also Trumpeter and Tundra Swans.</li>
@@ -109,7 +109,7 @@
         <img src="https://letsgoplayoutside.com/Uploads/Location/00000000-0000-25bc-0000-000000000000/36fa7bf8-0c7a-443d-ac13-dcc9491fe036.jpg" alt="Bear River Migratory Bird Refuge." id="bearriver">
         <h5>Bear River Migratory Bird Refuge. Image credit by <a href="https://commons.wikimedia.org/wiki/File:Bear_River_Migratory_Bird_Refuge_(15035027242).jpg" target="_blank">Ivy Allen</a></h5>
         <script>
-            let images = ["https://upload.wikimedia.org/wikipedia/commons/b/b2/Great_Salt_Lake_Utah_USA_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original","https://imaggeo.egu.eu/media/uploads/2016/12/05/4705/dfb564fade92ebeff8f92af2259e11c46b84be2a83af9e5a6c34195ee41efb56.jpg","https://cdn2.picryl.com/photo/2013/02/28/a-scenic-view-of-the-bear-river-migratory-bird-refuge-in-utah-30ca90-1024.jpg"]
+            let images = ["https://upload.wikimedia.org/wikipedia/commons/b/b2/Great_Salt_Lake_Utah_USA_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original","https://imaggeo.egu.eu/media/uploads/2016/12/05/4705/dfb564fade92ebeff8f92af2259e11c46b84be2a83af9e5a6c34195ee41efb56.jpg","https://cdn2.picryl.com/photo/2013/02/28/a-scenic-view-of-the-bear-river-migratory-bird-refuge-in-utah-30ca90-1024.jpg","https://s3.animalia.bio/animals/photos/full/original/2560px-wilson27s-phalarope2c-oregon-03.webp","https://s3.animalia.bio/animals/photos/full/original/american-avocet.webp","https://s3.animalia.bio/animals/photos/full/original/cinnamon-teal-2.webp","https://s3.animalia.bio/animals/photos/full/original/western-grebe-pair-bear-river-refuge.webp"]
             let currentImage = 0
             function bannerChange(){
                 currentImage += 1
@@ -117,6 +117,13 @@
                     currentImage = 0
                 }
                 document.getElementById("banner").src = images[currentImage]
+            }
+            function phalaropeChange(){
+                currentImage += 1
+                if (currentImage > 6){
+                    currentImage = 3
+                }
+                document.getElementById("phalarope").src = images[currentImage]
             }
         </script>
         </div>
