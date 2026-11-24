@@ -47,20 +47,32 @@
                 align-items: center;
                 margin-left: 20px;
                 margin-right: 20px;
-                gap: 20px;
                 background-color: #d7dbaa;             
                 color: #117b85;
             }
             #phalarope{
                 display: block;
                 margin: auto;
-                width: 70%;
+                width: 60%;
                 height: 500px;
                 object-fit: cover;
                 border: double 10px #f5edcb;
             }
             #list{
                 font-weight: bolder;
+            }
+            #button{
+                display: flex;
+                align-self: center;
+                margin: 0 auto;
+                font-family: 'Courier New', Courier, monospace;
+                background-color: #101f4a;
+                color:aliceblue;
+                font-weight: bolder;
+            }
+            #sadness{
+                display: none;
+                gap: 20px;
             }
             #bearriver{ 
                 margin: auto;
@@ -101,13 +113,18 @@
                 <li><span id="list">Other waterbirds-</span> American White Pelican is a large, common species of pelican that you may see flying in large V-shaped flocks. Other birds include White-faced Ibis and Double-crested Cormorant. Virginia Rail and Sora are also common but cryptic residents of the lake.</li>
                 <li>There are many more landbirds but this list is getting too long and there are tons of species.</li>
             </ul>
+        </div>       
+        <div id="click" onclick="showHide()">
+            <button div id="button">Sadness Button</button>
         </div>
-        <h2>Visit before it's too late</h2>
-        <div id="paragraphs">
-            <p>The GSL is rapidly shrinking due to various factors like agriculture and climate change. The lake has fallen around 19 feet since the 1850s, and does not seem to be getting any better recently- it is estimated that it may be completely dried up by 2030. This is of course obviously bad for the wildlife who rely on this lake for sustenance, but it's also bad for us too. The lakebed contains a multitude of heavy metals which, when exposed, get kicked up into the atmosphere and breathed in by us. I hate to end with a bummer but it's unfortunately a pretty big topic when talking about this lake. Thankfully, many organizations are working to restore the lake's health, like Wake the Great Salt Lake and Friends of the GSL. So, come and check it out, and maybe learn something new about our local wildlife and how to help it.</p>
+        <div id="sadness">
+            <h2>Visit before it's too late</h2>
+            <div id="paragraphs">
+                <p>The GSL is rapidly shrinking due to various factors like agriculture and climate change. The lake has fallen around 19 feet since the 1850s, and does not seem to be getting any better recently- it is estimated that it may be completely dried up by 2030. This is of course obviously bad for the wildlife who rely on this lake for sustenance, but it's also bad for us too. The lakebed contains a multitude of heavy metals which, when exposed, get kicked up into the atmosphere and breathed in by us. I hate to end with a bummer but it's unfortunately a pretty big topic when talking about this lake. Thankfully, many organizations are working to restore the lake's health, like Wake the Great Salt Lake and Friends of the GSL. So, come and check it out, and maybe learn something new about our local wildlife and how to help it.</p>
+            </div>
+            <img src="https://letsgoplayoutside.com/Uploads/Location/00000000-0000-25bc-0000-000000000000/36fa7bf8-0c7a-443d-ac13-dcc9491fe036.jpg" alt="Bear River Migratory Bird Refuge." id="bearriver">
+            <h5>Bear River Migratory Bird Refuge. Image credit by <a href="https://commons.wikimedia.org/wiki/File:Bear_River_Migratory_Bird_Refuge_(15035027242).jpg" target="_blank">Ivy Allen</a></h5>
         </div>
-        <img src="https://letsgoplayoutside.com/Uploads/Location/00000000-0000-25bc-0000-000000000000/36fa7bf8-0c7a-443d-ac13-dcc9491fe036.jpg" alt="Bear River Migratory Bird Refuge." id="bearriver">
-        <h5>Bear River Migratory Bird Refuge. Image credit by <a href="https://commons.wikimedia.org/wiki/File:Bear_River_Migratory_Bird_Refuge_(15035027242).jpg" target="_blank">Ivy Allen</a></h5>
         <script>
             let images = ["https://upload.wikimedia.org/wikipedia/commons/b/b2/Great_Salt_Lake_Utah_USA_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original","https://imaggeo.egu.eu/media/uploads/2016/12/05/4705/dfb564fade92ebeff8f92af2259e11c46b84be2a83af9e5a6c34195ee41efb56.jpg","https://cdn2.picryl.com/photo/2013/02/28/a-scenic-view-of-the-bear-river-migratory-bird-refuge-in-utah-30ca90-1024.jpg","https://s3.animalia.bio/animals/photos/full/original/2560px-wilson27s-phalarope2c-oregon-03.webp","https://s3.animalia.bio/animals/photos/full/original/american-avocet.webp","https://s3.animalia.bio/animals/photos/full/original/cinnamon-teal-2.webp","https://s3.animalia.bio/animals/photos/full/original/western-grebe-pair-bear-river-refuge.webp"]
             let currentImage = 0
@@ -124,6 +141,16 @@
                     currentImage = 3
                 }
                 document.getElementById("phalarope").src = images[currentImage]
+            }           
+            function showHide(){
+                let item = document.getElementById("sadness")
+                if(item.style.display == "grid"){
+                    item.style.display = "none"
+                    document.getElementById("button").innerHTML = "Sadness Button"
+                }else{
+                    item.style.display = "grid"
+                    document.getElementById("button").innerHTML = "Hide Sadness"
+                }
             }
         </script>
         </div>
